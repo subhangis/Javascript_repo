@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .effect-1 ~ .focus-border{position:absolute; bottom:0; left:0; width:0; height:2px; background-color: rgb(0, 60, 255);}
+        .effect-1:focus ~ .focus-border{width: 100%; transition: 0.4s;}
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+        <div>
+            <p>A function is triggered when the user is pressing a key in the input field</p>
+            <br>
+            <input type="text" class="effect-1" onkeypress="keypress()" onkeydown="keyDown()" onkeyup="keyUp()">
+            <br />
+            <p id="keys"></p>
+        </div>
+    </div>
+
+    <script>
+        const keypress =() => {
+            document.getElementById('keys').innerHTML = `you press ${event.key} and  it's code is ${event.code}`;
+        }
+        const keyDown =() => {
+            document.getElementById('keys').innerHTML= `key is down`;
+        }
+        const keyUp =() => {
+            document.getElementById('keys').innerHTML= `key is UP`;
+        }
+    </script>
+</body>
+
+</html>

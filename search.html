@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: aquamarine;
+        text-align: center;
+    }
+    .container  p{
+        padding: 20px;
+    }
+    button{
+        background-color: yellow;
+        width: 70px;
+        height: 30px;
+        border: yellow;
+    }
+    form{
+        padding: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div><p class="para">please like the video</p></div>
+        <div><p class="para">please share the video</p></div>
+        <div><p>don,t forget to subscribe my channel</p></div>
+
+        <h1 id="heading">Change the content of the h1</h1>
+        <form action="">
+            <label for="male">male</label>
+            <input type="radio" name="gender" id="">
+            <label for="">female</label>
+            <input type="radio" name="gender"id="">
+            <label for="">malefemale</label>
+            <input type="radio" name="gender"id="">
+    
+        </form>
+        <button onclick="changecontent()"> click me</button>
+    </div>
+
+    <script>
+        //we can directly write
+        const changecontent=()=>{
+        //     document.getElementById('heading').innerHTML="welcome to thapa techinical";
+        // }
+        //by taking the reference, heading is the object here
+        // const headingchange = document.getElementById('heading');
+        // headingchange.innerHTML="hellow";
+
+        // console.log(document.getElementsByClassName('para'));
+        // console.log(document.getElementsByTagName('p'));
+
+        // console.log(document.getElementsByName('gender'));
+
+        document.querySelector('#heading').innerHTML ="i changed again"
+        document.querySelector('.para').innerHTML ="i changed again"//it change 1st matching value if class of different element is same
+
+        }
+        </script>
+</body>
+</html>

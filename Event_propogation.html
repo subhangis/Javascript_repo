@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            align-items: center;
+        }
+        .parentdiv{
+            height: 400px;
+            width: 500px;
+            border: 2px solid black;
+            background-color: rgb(166, 0, 255);
+            border:10px solid aquamarine;
+            box-sizing: 0,10px,13px -10px rgb(98, 186, 40);
+            cursor: pointer;
+            position: absolute;
+            align-items: center;
+        }
+        .childdiv{
+            height: 200px;
+            width: 300px;
+            border: 2px solid black;
+            background-color: aqua;
+            border:10px solid aquamarine;
+            box-sizing: 0,10px,13px -10px rgb(186, 40, 65);
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="parentdiv" id="parentid">
+        <div class="childdiv" id="childid"></div>
+    </div>
+    <script>
+        const parentid = document.getElementById('parentid');
+        const childid = document.getElementById('childid');
+
+        const parentcall =()=>{
+            alert('parent div call');
+        }
+        const childcall =()=>{
+            alert('child div call');
+        }
+        //default bubbling phase
+        // parentid.addEventListener('click', parentcall);
+        // childid.addEventListener('click', childcall);
+        //capturing phase
+        // parentid.addEventListener('click', parentcall,true);
+        // childid.addEventListener('click', childcall,true);
+        //bubbling phase
+        parentid.addEventListener('click', parentcall,false);//third value is the event value which is decide by user
+        childid.addEventListener('click', childcall,false);
+    </script>
+</body>
+</html>

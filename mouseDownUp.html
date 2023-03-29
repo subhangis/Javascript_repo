@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: aqua;
+        }
+        p{
+            text-align: center;
+            font-size: 30px;
+            margin: 50px;
+            padding: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <p id="mpy" onmousedown="mouseDown()" onmouseup="mouseUp()">
+    click the text! .THE mouse down function is triggered when the mouse button is pressed down over the paragraph and set the color of the text to read The mouse function is trrigred when the mouse button is realesed, and sets the color of the text to green.</p>
+
+    <script>
+        function mouseDown (){
+            document.getElementById('mpy').style.color = "red";
+        }
+
+        function mouseUp(){
+            document.getElementById('mpy').style.color="pink";
+        }
+    </script>
+</body>
+</html>
